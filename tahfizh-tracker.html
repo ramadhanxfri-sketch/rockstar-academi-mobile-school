@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tahfizh Tracker | Rockstar Academi Islamic School</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar scrolled">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">ROCKSTAR</span>
+                        <span class="logo-sub">TAHFIZH PORTAL</span>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="admin-dashboard.html"><i class="fas fa-chart-line"></i> Admin Dashboard</a></li>
+                    <li><a href="tahfizh-tracker.html"><i class="fas fa-quran"></i> Tahfizh Tracker</a></li>
+                    <li><a href="student-dashboard.html"><i class="fas fa-user-circle"></i> Student Portal</a></li>
+                    <li><a href="index.html" class="btn btn-secondary"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="section-padding mt-5">
+        <div class="container">
+            <div class="section-header mb-5" data-aos="fade-up">
+                <h2 class="section-title">Tahfizh Progress Tracker</h2>
+                <p>Monitor real-time memorization progress of all students across Juz 1 to 30.</p>
+            </div>
+
+            <!-- Tracker Table -->
+            <div class="table-section mt-5" data-aos="fade-up">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4>Student Progress Overview (Juz 1 - 7)</h4>
+                    <div class="legend small">
+                        <span class="badge completed" style="background: #f0fdf4; color: #2d8a2d; padding: 5px 10px; margin-right: 10px;">Completed</span>
+                        <span class="badge in-progress" style="background: #fffbeb; color: #d97706; padding: 5px 10px; margin-right: 10px;">In Progress</span>
+                        <span class="badge not-started" style="background: #f8f9fa; color: #9ca3af; padding: 5px 10px;">Not Started</span>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="modern-table">
+                        <thead>
+                            <tr>
+                                <th>Student Name</th>
+                                <th class="text-center">Juz 1</th>
+                                <th class="text-center">Juz 2</th>
+                                <th class="text-center">Juz 3</th>
+                                <th class="text-center">Juz 4</th>
+                                <th class="text-center">Juz 5</th>
+                                <th class="text-center">Juz 6</th>
+                                <th class="text-center">Juz 7</th>
+                                <th>Overall Progress</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tahfizh-tracker-body">
+                            <!-- Populated by script.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer section-padding bg-primary text-white">
+        <div class="container text-center">
+            <p>&copy; 2026 Rockstar Academi Islamic School. Tahfizh Monitoring System.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

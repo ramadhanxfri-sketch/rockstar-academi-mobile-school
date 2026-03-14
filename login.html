@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Rockstar Academi Islamic School</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light auth-page">
+
+    <div class="container">
+        <div class="login-container" data-aos="zoom-in" style="margin: 0 auto;">
+            <div class="login-header">
+                <div class="logo" style="margin-bottom: 20px;">
+                    <a href="index.html">
+                        <span class="logo-text" style="color: var(--primary-color);">ROCKSTAR</span>
+                        <span class="logo-sub" style="color: var(--secondary-color);">ACADEMI ISLAMIC SCHOOL</span>
+                    </a>
+                </div>
+                <h2>Portal Login</h2>
+                <p class="text-muted">Enter your credentials to access the dashboard</p>
+            </div>
+            
+            <form id="login-form" class="login-form">
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" placeholder="e.g., admin@rockstar.sch.id" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+                <div class="form-group mt-4">
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Login to Dashboard</button>
+                </div>
+            </form>
+            
+            <div class="login-footer mt-4 text-center">
+                <p class="small text-muted">Demo Access:<br>Admin: admin@rockstar.sch.id / admin123<br>Student: student@rockstar.sch.id / student123</p>
+                <hr class="my-3">
+                <a href="index.html" class="text-secondary"><i class="fas fa-arrow-left"></i> Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

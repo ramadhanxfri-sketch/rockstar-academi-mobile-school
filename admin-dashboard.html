@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Rockstar Academi Islamic School</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <!-- Navbar (Minimalist for Dashboard) -->
+    <header>
+        <nav class="navbar scrolled">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">ROCKSTAR</span>
+                        <span class="logo-sub">ADMIN PORTAL</span>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="admin-dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a></li>
+                    <li><a href="tahfizh-tracker.html"><i class="fas fa-quran"></i> Tahfizh Tracker</a></li>
+                    <li><a href="teachers.html"><i class="fas fa-user-graduate"></i> Teachers</a></li>
+                    <li><a href="index.html" class="btn btn-secondary"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="section-padding mt-5">
+        <div class="container">
+            <div class="section-header mb-5">
+                <h2 class="section-title">Admin Overview</h2>
+                <p>Welcome back, Administrator. Manage your school's data effectively.</p>
+            </div>
+
+            <!-- Statistics Cards -->
+            <div class="dashboard-grid">
+                <div class="stat-card" data-aos="fade-up">
+                    <i class="fas fa-users"></i>
+                    <h3 id="total-students">0</h3>
+                    <p>Total Students</p>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <h3 id="total-teachers">0</h3>
+                    <p>Total Teachers</p>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-star"></i>
+                    <h3 id="tahfizh-stars">0</h3>
+                    <p>Tahfizh Stars (15+ Juz)</p>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-trophy"></i>
+                    <h3 id="total-achievements">0</h3>
+                    <p>Achievements</p>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-grid mt-5">
+                <div class="chart-box" data-aos="fade-right">
+                    <h4>Tahfizh Distribution</h4>
+                    <canvas id="tahfizhChart"></canvas>
+                </div>
+                <div class="chart-box" data-aos="fade-left">
+                    <h4>Academic Performance</h4>
+                    <canvas id="scoreChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Student Table -->
+            <div class="table-section mt-5" data-aos="fade-up">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4>Recent Students</h4>
+                    <button class="btn btn-primary btn-sm">Export Data</button>
+                </div>
+                <div class="table-responsive">
+                    <table class="modern-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Class</th>
+                                <th>Tahfizh Progress</th>
+                                <th>Academic Score</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="student-table-body">
+                            <!-- Populated by script.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer section-padding bg-primary text-white">
+        <div class="container text-center">
+            <p>&copy; 2026 Rockstar Academi Islamic School. Admin Portal Powered by Digital Management System.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

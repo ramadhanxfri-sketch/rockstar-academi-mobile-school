@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | Rockstar Academi Islamic School</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar scrolled">
+            <div class="container">
+                <div class="logo">
+                    <a href="index.html">
+                        <span class="logo-text">ROCKSTAR</span>
+                        <span class="logo-sub">STUDENT PORTAL</span>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="student-dashboard.html"><i class="fas fa-user-circle"></i> My Dashboard</a></li>
+                    <li><a href="achievements.html"><i class="fas fa-trophy"></i> Achievements</a></li>
+                    <li><a href="index.html" class="btn btn-secondary"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="section-padding mt-5">
+        <div class="container">
+            <div class="section-header mb-5" data-aos="fade-up">
+                <h2 class="section-title">Assalamu'alaikum, <span id="stu-name">Student</span>!</h2>
+                <p>Welcome to your personal dashboard. Track your Tahfizh and academic progress.</p>
+            </div>
+
+            <div class="dashboard-layout">
+                <!-- Sidebar Profile -->
+                <aside class="dashboard-sidebar" data-aos="fade-right">
+                    <div class="stat-card">
+                        <div class="founder-img" style="width: 120px; height: 120px; margin-bottom: 20px;">
+                            <i class="fas fa-user-graduate" style="font-size: 4rem;"></i>
+                        </div>
+                        <h4 id="stu-name-display">Student Profile</h4>
+                        <p class="small text-muted">ID: <span id="stu-id">STU-000</span></p>
+                        <p class="small text-muted">Class: <span id="stu-class">Grade X</span></p>
+                        <hr class="my-3">
+                        <button class="btn btn-outline" style="width: 100%; color: var(--primary-color); border-color: var(--primary-color);">Edit Profile</button>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="dashboard-main">
+                    <!-- Tahfizh Progress Section -->
+                    <div class="chart-box" data-aos="fade-up">
+                        <h3 class="mb-4"><i class="fas fa-book-quran text-secondary"></i> Tahfizh Progress</h3>
+                        <div class="progress-large">
+                            <div id="tahfizh-progress-bar" class="progress-large-bar" style="width: 0%"></div>
+                        </div>
+                        <p id="tahfizh-text" class="text-center font-weight-bold">0 / 30 Juz Completed</p>
+                        
+                        <div class="juz-tracker mt-5">
+                            <h4>Memorization Checklist (Juz 1-10)</h4>
+                            <ul id="juz-list" class="juz-grid" style="list-style: none; padding: 0;">
+                                <!-- Populated by script.js -->
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Academic Stats (Demo) -->
+                    <div class="dashboard-grid mt-4">
+                        <div class="stat-card" data-aos="fade-up">
+                            <i class="fas fa-graduation-cap"></i>
+                            <h3>A</h3>
+                            <p>Average Grade</p>
+                        </div>
+                        <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                            <i class="fas fa-calendar-check"></i>
+                            <h3>98%</h3>
+                            <p>Attendance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer section-padding bg-primary text-white">
+        <div class="container text-center">
+            <p>&copy; 2026 Rockstar Academi Islamic School. Student Learning Management System.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
